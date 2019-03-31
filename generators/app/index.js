@@ -195,12 +195,10 @@ module.exports = class extends Generator {
         this.destinationPath("src/GlobalStyles.ts")
       );
 
-      this.npmInstall([
-        "styled-components",
-        "styled-normalize",
-        "styled-is",
-        this.useParamMacro ? "param.macro" : undefined
-      ]);
+      this.npmInstall(["styled-components", "styled-normalize", "styled-is"]);
+      if (this.useParamMacro) {
+        this.npmInstall(["param.macro"]);
+      }
       this.npmInstall(
         [
           "@types/styled-components",
