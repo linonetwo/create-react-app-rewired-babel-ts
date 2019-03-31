@@ -1,0 +1,51 @@
+{
+  "name": "<%= projectName %>",
+  "description": "<%= projectDescription %>",
+  "version": "<%= projectVersion %>",
+  "author": "<%= authorName %>",
+  "license": "<%= license %>",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.3.3",
+    "@rescripts/cli": "^0.0.10",
+    "@rescripts/rescript-env": "^0.0.10",
+    "@types/jest": "24.0.11",
+    "@types/lodash": "^4.14.123",
+    "@types/node": "11.12.2",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "react-scripts": "2.1.8",
+    "tslint": "^5.14.0",
+    "tslint-clean-code": "^0.2.9",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-immutable": "^5.5.2",
+    "tslint-react": "^4.0.0",
+    "tslint-react-hooks": "^2.0.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "3.4.1"
+  },
+  "rescripts": [
+    [
+      "use-babel-config",
+      ".babelrc.js"
+    ]
+  ]
+}
