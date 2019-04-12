@@ -1,6 +1,8 @@
 # generator-create-react-app-rewired-babel-ts [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Use create-react-app ( CRA ) with babel and typescript
 
+Includes rescript to rewire CRA options, `.babelrc` and `tslint`, and optional styled-components.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-create-react-app-rewired-babel-ts using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
