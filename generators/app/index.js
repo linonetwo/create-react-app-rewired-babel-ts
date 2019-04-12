@@ -188,6 +188,33 @@ module.exports = class extends Generator {
       }
     );
 
+    this.npmInstall(["lodash", "react", "react-dom"]);
+    // Devdeps
+    this.npmInstall(
+      [
+        "@babel/preset-typescript",
+        "@rescripts/cli",
+        "@rescripts/rescript-env",
+        "@types/jest",
+        "@types/lodash",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom",
+        "react-scripts",
+        "tslint",
+        "tslint-clean-code",
+        "tslint-config-prettier",
+        "tslint-immutable",
+        "tslint-react",
+        "tslint-react-hooks",
+        "tslint-sonarts",
+        "typescript"
+      ],
+      {
+        "save-dev": true
+      }
+    );
+
     // StyledComponents
     if (this.useStyledComponents) {
       this.fs.copy(
