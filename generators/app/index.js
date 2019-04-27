@@ -24,13 +24,6 @@ module.exports = class extends Generator {
         default: true
       },
       {
-        type: "confirm",
-        name: "useParamMacro",
-        message:
-          "Would you like to enable param.macro? (works well with styled-components)",
-        default: true
-      },
-      {
         name: "projectName",
         type: "input",
         message: "Project name:",
@@ -140,8 +133,8 @@ module.exports = class extends Generator {
       this.destinationPath(".babelrc.js"),
       {
         styledPlugin: this.useStyledComponents
-          ? `plugins: ['babel-plugin-styled-components'],`
-          : ""
+          ? `plugins: ['babel-plugin-styled-components', 'babel-plugin-array-last-index', 'param.macro'],`
+          : "plugins: ['babel-plugin-array-last-index', 'param.macro'],"
       },
       {
         escape: i => i
@@ -188,11 +181,12 @@ module.exports = class extends Generator {
       }
     );
 
-    this.npmInstall(["lodash", "react", "react-dom"]);
+    this.npmInstall(["lodash", "react", "react-dom", "param.macro"]);
     // Devdeps
     this.npmInstall(
       [
         "@babel/preset-typescript",
+        "babel-plugin-array-last-index",
         "@rescripts/cli",
         "@rescripts/rescript-env",
         "@types/jest",
@@ -223,9 +217,6 @@ module.exports = class extends Generator {
       );
 
       this.npmInstall(["styled-components", "styled-normalize", "styled-is"]);
-      if (this.useParamMacro) {
-        this.npmInstall(["param.macro"]);
-      }
       this.npmInstall(
         [
           "@types/styled-components",

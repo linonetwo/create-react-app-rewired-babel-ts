@@ -4,6 +4,8 @@
 
 Includes rescript to rewire CRA options, `.babelrc` (use `@babel/preset-typescript` for typescript, instead of webpack plugin. So you can insert other babel plugins to compile pipeline) and `tslint`, and optional styled-components.
 
+Note that this ships with [`babel-plugin-array-last-index`](https://github.com/lijinke666/babel-plugin-array-last-index) and [`param.macro`](https://github.com/citycide/param.macro), they are compiler plugins so won't increase your bundle size and they are very useful. If you don't like it, just remove them from `babelrc.js`.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-create-react-app-rewired-babel-ts using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
