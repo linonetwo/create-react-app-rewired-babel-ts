@@ -133,8 +133,8 @@ module.exports = class extends Generator {
       this.destinationPath(".babelrc.js"),
       {
         styledPlugin: this.useStyledComponents
-          ? `plugins: ['babel-plugin-styled-components', 'babel-plugin-array-last-index', 'param.macro'],`
-          : "plugins: ['babel-plugin-array-last-index', 'param.macro'],"
+          ? `plugins: ['babel-plugin-styled-components', 'babel-plugin-array-last-index', 'babel-plugin-macros'],`
+          : "plugins: ['babel-plugin-array-last-index', 'babel-plugin-macros'],"
       },
       {
         escape: i => i
