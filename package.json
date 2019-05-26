@@ -1,6 +1,6 @@
 {
   "name": "generator-create-react-app-rewired-babel-ts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Use create-react-app ( CRA ) with babel and typescript",
   "homepage": "https://github.com/linonetwo/create-react-app-rewired-babel-ts",
   "author": {
